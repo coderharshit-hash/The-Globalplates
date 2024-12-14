@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #3c8dbc;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .review-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .review-card:hover {
+            transform: scale(1.05);
+        }
+
+        .review-content {
+            padding: 15px;
+        }
+
+        .review-title {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .review-text {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .review-features {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        footer {
+            background-color: #3c8dbc;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipe Reviews</h1>
+    </header>
+
+    <main>
+        <div class="reviews-container">
+            <!-- Review Cards -->
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Spaghetti Carbonara</h3>
+                    <p class="review-text">"This recipe is a family favorite! The sauce was creamy and perfectly seasoned. Will make again!"</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Jane D.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Vegetarian Stir-fry</h3>
+                    <p class="review-text">"Loved how fresh and flavorful this was. A quick and healthy dinner option!"</p>
+                    <p class="review-features">Rating: ★★★★☆ | Reviewer: Mark T.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Classic Margherita Pizza</h3>
+                    <p class="review-text">"Simple yet delicious. The crust was crispy, and the toppings were just right."</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Sarah L.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Grilled Salmon</h3>
+                    <p class="review-text">"The salmon was perfectly cooked and the lemon-herb seasoning was divine."</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Alex P.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Chicken Curry</h3>
+                    <p class="review-text">"Rich, spicy, and full of flavor! This was a hit at my dinner party."</p>
+                    <p class="review-features">Rating: ★★★★☆ | Reviewer: Emily W.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Chocolate Lava Cake</h3>
+                    <p class="review-text">"Incredible! The molten center was heavenly. Highly recommend for dessert lovers."</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Chloe M.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Vegetable Soup</h3>
+                    <p class="review-text">"A comforting and hearty soup. Perfect for a cold evening."</p>
+                    <p class="review-features">Rating: ★★★★☆ | Reviewer: Tom H.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Garlic Bread</h3>
+                    <p class="review-text">"Crispy, buttery, and garlicky goodness! It paired perfectly with our pasta."</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Rachel K.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Caesar Salad</h3>
+                    <p class="review-text">"The dressing was spot on, and the croutons added a nice crunch."</p>
+                    <p class="review-features">Rating: ★★★★☆ | Reviewer: Daniel V.</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-content">
+                    <h3 class="review-title">Banana Bread</h3>
+                    <p class="review-text">"Moist and flavorful. The perfect way to use up overripe bananas."</p>
+                    <p class="review-features">Rating: ★★★★★ | Reviewer: Olivia R.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Globalplate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

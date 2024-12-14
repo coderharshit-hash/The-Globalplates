@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #6a1b9a;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .tip-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tip-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tip-content {
+            padding: 15px;
+        }
+
+        .tip-title {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .tip-features {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #6a1b9a;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kitchen Tips</h1>
+    </header>
+
+    <main>
+        <div class="tips-container">
+            <!-- Tip Cards -->
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.16.34_773a961c.jpg" alt="Keep Knives Sharp">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Keep Your Knives Sharp</h3>
+                    <p class="tip-features">Sharp knives make cooking safer and more efficient. Use a honing rod regularly and sharpen as needed.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.17.12_cdadff0b.jpg" alt="Organize Your Pantry">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Organize Your Pantry</h3>
+                    <p class="tip-features">Label containers and group similar items together for easy access and less food waste.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.17.31_dbf9b658.jpg" alt="Preheat Your Pans">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Preheat Your Pans</h3>
+                    <p class="tip-features">Always preheat pans before adding ingredients for even cooking and better results.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.18.17_b12386d7.jpg" alt="Use Fresh Herbs">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Use Fresh Herbs</h3>
+                    <p class="tip-features">Fresh herbs elevate the flavor of dishes. Add them towards the end of cooking for the best aroma.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.18.36_e49159ea.jpg" alt="Keep Your Cutting Board Stable">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Keep Your Cutting Board Stable</h3>
+                    <p class="tip-features">Place a damp towel underneath the cutting board to prevent slipping.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.19.00_90f17cb2.jpg" alt="Rest Your Meat">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Rest Your Meat</h3>
+                    <p class="tip-features">Allow cooked meat to rest for a few minutes before slicing to retain juices.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.20.03_b49ce81b.jpg" alt="Don’t Overcrowd the Pan">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Don’t Overcrowd the Pan</h3>
+                    <p class="tip-features">Overcrowding lowers the pan's temperature, leading to uneven cooking. Cook in batches if needed.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.20.14_c825f05e.jpg" alt="Taste as You Go">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Taste as You Go</h3>
+                    <p class="tip-features">Tasting as you cook ensures proper seasoning and allows adjustments on the spot.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.20.54_df631a69.jpg" alt="Store Herbs Properly">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Store Herbs Properly</h3>
+                    <p class="tip-features">Wrap fresh herbs in a damp paper towel and store them in the fridge to prolong freshness.</p>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <div class="tip-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.21.10_4a916e0f.jpg" alt="Use Room Temperature Ingredients">
+                </div>
+                <div class="tip-content">
+                    <h3 class="tip-title">Use Room Temperature Ingredients</h3>
+                    <p class="tip-features">Bring ingredients like butter and eggs to room temperature for better mixing and baking results.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Globalplate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

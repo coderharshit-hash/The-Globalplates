@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #6a1b9a;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .recipes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .recipe-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+
+        .recipe-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 15px;
+        }
+
+        .recipe-title {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .recipe-features {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #6a1b9a;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delicious Recipes</h1>
+    </header>
+
+    <main>
+        <div class="recipes-container">
+            <!-- Recipe Cards -->
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.49.03_1c791078.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Spaghetti Carbonara</h3>
+                    <p class="recipe-features">Prep Time: 20 mins | Ingredients: Pasta, Eggs, Bacon | Rating: ★★★★☆</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.49.46_93ec5234.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Vegetarian Stir-fry</h3>
+                    <p class="recipe-features">Prep Time: 25 mins | Ingredients: Vegetables, Soy Sauce, Tofu | Rating: ★★★★★</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.51.24_c39733d6.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Classic Margherita Pizza</h3>
+                    <p class="recipe-features">Prep Time: 30 mins | Ingredients: Dough, Tomatoes, Cheese | Rating: ★★★★☆</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.52.42_465bda61.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Grilled Salmon</h3>
+                    <p class="recipe-features">Prep Time: 15 mins | Ingredients: Salmon, Lemon, Herbs | Rating: ★★★★★</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.52.22_20695367.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Chicken Curry</h3>
+                    <p class="recipe-features">Prep Time: 40 mins | Ingredients: Chicken, Spices, Coconut Milk | Rating: ★★★★☆</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.56.42_3bf55c14.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Beef Tacos</h3>
+                    <p class="recipe-features">Prep Time: 20 mins | Ingredients: Beef, Tortillas, Spices | Rating: ★★★★★</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.59.02_0ac44176.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Vegetable Soup</h3>
+                    <p class="recipe-features">Prep Time: 30 mins | Ingredients: Vegetables, Broth, Herbs | Rating: ★★★★☆</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.59.23_2fd6c12b.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Pancakes</h3>
+                    <p class="recipe-features">Prep Time: 15 mins | Ingredients: Flour, Eggs, Milk | Rating: ★★★★☆</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 10.59.45_c25aad90.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Garlic Bread</h3>
+                    <p class="recipe-features">Prep Time: 10 mins | Ingredients: Bread, Garlic, Butter | Rating: ★★★★★</p>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="WhatsApp Image 2024-12-14 at 11.01.07_a0e70743.jpg" alt="Recipe Image">
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Banana Smoothie</h3>
+                    <p class="recipe-features">Prep Time: 5 mins | Ingredients: Bananas, Milk, Honey | Rating: ★★★★☆</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The Globalplate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

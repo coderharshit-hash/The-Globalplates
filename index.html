@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The globalplate Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo", style="font-size:40px">The Globalplate</div>
+            <ul class="nav-links">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+            
+                <h3><a href="contact.html">Contact us</a></h3>
+                <li><button id="theme-toggle">Toggle Theme</button></li>
+            
+            <!-- Video Upload Section -->
+            <div id="video-upload-container">
+                <input type="file" id="video-upload" accept="video/*" style="display: none;" onchange="loadVideo(event)" />
+                <button id="video-upload-button">Upload Video</button>
+            </div>
+        </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Video Display Section -->
+        <section id="video-section">
+            <h3></h3>
+            <video id="uploaded-video" controls style="max-width: 100%; display: none;"></video>
+        </section>
+   
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <input type="text" id="search-bar" placeholder="Search recipes...">
+            <button id="voice-search-button">
+                <img src="WhatsApp Image 2024-12-13 at 16.57.27_73f47f5e.jpg" width="30px" alt="Voice Search">
+            </button>
+        </section>
+    
+        
+            <!-- Features Section -->
+            <section class="features">
+                <div class="feature" id="cuisine">
+                    <h3><a href="cuisine.html">Cuisine</a></h3>
+                </div>
+                <div class="feature" id="reviews">
+                    <h3><a href="Review.html">Reviews</a></h3>
+                </div>
+                <div class="feature" id="ai-chatbot">
+                    <h3><a href="chatbot.html">AI Chatbot</a></h3>
+                </div>
+                <div class="feature" id="kitchen">
+                    <h3><a href="kitchen-tips.html">Kitchen Tips</a></h3>
+
+                </div>
+            </section>
+        
+        
+    
+        <!-- Tips Display Section -->
+        <section id="tips-display" class="hidden">
+            <h3>kitchen Tips</h3>
+            <ul id="kitchen-tips-list">
+                <ul class="nav-links"></ul>
+                <li><a href="kitchen-tips.html">kitchen Tips</a></li>
+            </ul>
+                <!-- Tips will be dynamically added here -->
+            </ul>
+            <button onclick="goBack()">Back</button>
+        </section>
+    
+    
+    
+    
+    
+        <!-- Coin Section -->
+        <section id="coins">
+            <h3>Your Coins</h3>
+            <p>You have <span id="coin-count">0</span> coins.</p>
+            <p>Earn 1000 coins to redeem a ₹100 voucher for Zomato, Flipkart, Swiggy, or other partners.</p>
+            <button id="redeem-button" disabled>Redeem Voucher</button>
+        </section>
+    
+    
+
+        <!-- Notifications Dropdown -->
+        <section id="notifications" class="hidden">
+            <h3>Notifications</h3>
+            <ul>
+                <li>5 new notifications</li>
+            </ul>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile" class="hidden">
+            <h3>Your Profile</h3>
+            <p>Welcome back! Manage your favorite recipes and settings here.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 The globalplate. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Voice search functionality
+        document.getElementById('voice-search-button').addEventListener('click', () => {
+            alert('Voice search activated! (Demo feature)');
+        });
+
+        // Navigation functionality for Profile, Notifications, and Kitchen Tips
+        document.querySelector('.nav-links').addEventListener('click', (event) => {
+            const target = event.target.getAttribute('href');
+            if (target === '#profile' || target === '#notifications' || target === '#kitchen-tips') {
+                event.preventDefault();
+                document.querySelectorAll('section').forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.querySelector(target).classList.remove('hidden');
+            }
+        });
+
+        // Back button functionality
+        function goBack() {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.querySelector('.features').classList.remove('hidden');
+        }
+
+        // Theme toggle functionality
+        const body = document.body;
+        const themeToggleButton = document.getElementById('theme-toggle');
+        themeToggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+        });
+
+        // Coin functionality
+        let coins = 0; // Initialize coins
+        const coinCountElement = document.getElementById('coin-count');
+        const redeemButton = document.getElementById('redeem-button');
+
+        // Update coin count display
+        function updateCoinDisplay() {
+            coinCountElement.textContent = coins;
+            redeemButton.disabled = coins < 1000;
+        }
+
+        // Simulate earning coins (for demonstration purposes)
+        setInterval(() => {
+            coins += 100;
+            updateCoinDisplay();
+            if (coins >= 1000) {
+                alert('You can now redeem your voucher!');
+            }
+        }, 5000); // Add 100 coins every 5 seconds
+
+        // Redeem voucher functionality
+        redeemButton.addEventListener('click', () => {
+            if (coins >= 1000) {
+                coins -= 1000;
+                updateCoinDisplay();
+                alert('Voucher redeemed successfully! Enjoy your ₹100 discount.');
+            }
+        });
+
+        updateCoinDisplay();
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        header {
+            background-color: #f8b400;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-right: 1em;
+        }
+        .nav-links a, .nav-links button {
+            text-decoration: none;
+            color: white;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .search-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2em;
+        }
+        #search-bar {
+            width: 70%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #voice-search-button {
+            margin-left: 1em;
+            background: none;
+            border: none;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 2em;
+        }
+        .feature {
+            background: #f1f1f1;
+            padding: 1em;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1;
+            margin: 0 1em;
+        }
+        #coins {
+            text-align: center;
+            margin: 2em;
+            background: #f9f9f9;
+            padding: 1em;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: #333;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .dark-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-theme header {
+            background-color: #333;
+        }
+        .dark-theme footer {
+            background-color: #1a1a1a;
+        }
+        .dark-theme .feature {
+            background-color: #2a2a2a;
+        }
+        .dark-theme #coins {
+            background-color: #2a2a2a;
+        }
+    </style>
+</body>
+</html>
